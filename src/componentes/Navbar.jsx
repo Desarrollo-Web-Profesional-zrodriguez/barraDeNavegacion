@@ -7,12 +7,18 @@ import { PiShoppingCartLight } from "react-icons/pi";
 import MenuResponsivo from "./MenuResponsivo";
 import { motion } from "motion/react";
 
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
     const [abierto, setAbierto] = useState(false);
 
     return (
         <>
-            <nav>
+            <motion.nav
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
                 <div className='container flex justify-between font-bold items-center py-8'>
                     {/* Sección de Logo */}
                     <div className='text-2xl flex items-center gap-2 uppercase'>
@@ -26,12 +32,12 @@ const Navbar = () => {
                         <ul className="flex items-center gap-7 text-gray-600">
                             {navbarLinks.map((item) => (
                                 <li key={item.id}>
-                                    <a
-                                        href={item.url}
+                                    <Link
+                                        to={item.url}
                                         className="inline-block py-1 px-3 hover:text-primary duration-200"
                                     >
                                         {item.title}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -62,7 +68,7 @@ const Navbar = () => {
                         />
                     </div>
                 </div>
-            </nav>
+            </motion.nav>
 
             <MenuResponsivo open={abierto} navbarLinks={navbarLinks} />
         </>
