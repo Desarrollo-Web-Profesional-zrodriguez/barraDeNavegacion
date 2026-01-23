@@ -15,6 +15,18 @@ const navbarLinks = [
         name: "courses",
         title: "Cursos",
         url: "/cursos"
+    },
+    {
+        id: 4,
+        name: "contact",
+        title: "Contacto",
+        url: "/contacto"
+    },
+    {
+        id: 5,
+        name: "profile",
+        title: "Perfil",
+        url: "/perfil"
     }
 ];
 export { navbarLinks };

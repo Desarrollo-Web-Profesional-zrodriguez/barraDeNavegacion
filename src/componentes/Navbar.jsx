@@ -5,12 +5,14 @@ import { ImBooks } from "react-icons/im";
 import { MdMenu } from "react-icons/md";
 import { PiShoppingCartLight } from "react-icons/pi";
 import MenuResponsivo from "./MenuResponsivo";
+import LoginModal from "./LoginModal";
 import { motion } from "motion/react";
 
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [abierto, setAbierto] = useState(false);
+    const [loginOpen, setLoginOpen] = useState(false);
 
     return (
         <>
@@ -54,6 +56,7 @@ const Navbar = () => {
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={() => setLoginOpen(true)}
                             className="hover:bg-primary font-semibold rounded-md text-white bg-secondary px-4 py-2 duration-300 border-primary hidden md:block"
                         >
                             Ingresar
@@ -71,6 +74,7 @@ const Navbar = () => {
             </motion.nav>
 
             <MenuResponsivo open={abierto} navbarLinks={navbarLinks} />
+            <LoginModal isOpen={loginOpen} onClose={() => setLoginOpen(false)} />
         </>
     )
 }

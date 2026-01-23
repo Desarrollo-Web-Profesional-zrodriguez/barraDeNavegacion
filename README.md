@@ -1,7 +1,4 @@
-# Barra de Navegación imagenes
-## Docker images
-![alt text](image.png)
-## Docker containers
-![alt text](image-1.png)
-## Port 8080
-![alt text](image-2.png)
+# Barra de Navegación - Versión de Desafío
+> Esta es la versión de desafío del proyecto
+## Video para revision
+<video controls src="2026-01-23 15-02-23.mp4" title="Title"></video>
