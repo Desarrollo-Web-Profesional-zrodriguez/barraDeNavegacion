@@ -3,7 +3,7 @@
 ## Video para revision
 <video controls src="2026-01-23 15-02-23.mp4" title="Title"></video>
 
-## Comandos paara arrancar la imagen
+## Comandos para arrancar la imagen
 ```
 docker run -p 8080:80 mi-app-react
 ```
