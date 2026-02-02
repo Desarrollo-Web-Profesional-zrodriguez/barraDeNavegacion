@@ -32,4 +32,9 @@ async function gestionarUsuarios() {
     return `${o ? 'Archivo actualizado' : 'Archivo creado'}`
 }
 
-gestionarUsuarios().then(console.log);
+export async function usuarios() {
+    const usuarios = await readFile('usuarios.json');
+    return JSON.parse(usuarios)
+}
+
+// gestionarUsuarios().then(console.log);
